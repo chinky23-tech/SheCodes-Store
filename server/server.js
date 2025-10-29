@@ -38,6 +38,13 @@ res.json({
 });
 });
 
+
+//import routes
+const authRoutes = require('./routes/auth');
+
+//use routes
+app.use('/api/auth' , authRoutes);
+
 const PORT = process.env.PORT || 3030;
 
 app.listen(PORT, () => {
